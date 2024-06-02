@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vítejte</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Vítejte</h1>
+        <div class="form-inline">
+            <a href="/books" class="btn btn-success">Seznam knih</a>
+            <form method="post" action="/logout" style="margin: 0;">
+                <button type="submit" class="btn btn-secondary">Odhlásit se</button>
+            </form>
+            <form id="delete-account-form" action="/delete_account" method="post" style="display:inline;" onsubmit="return confirmDeleteAccount();">
+                <button type="submit" class="red">Smazat účet</button>
+            </form>
+        </div>
+        <form method="post" action="/add_book">
+            <input type="text" name="title" placeholder="Název knihy" required>
+            <input type="text" name="author" placeholder="Autor" required>
+            <input type="text" name="year" placeholder="Rok vydání" required>
+            <input type="text" name="genre" placeholder="Žánr" required>
+            <textarea name="content" placeholder="Obsah" required></textarea> <br>
+            <textarea name="notes" placeholder="Poznámky"></textarea>
+            <button type="submit" class="blue">Přidat knihu</button>
+        </form>
+    </div>
+    <script>
+        function confirmDeleteAccount() {
+            return confirm("Opravdu chcete smazat svůj účet?");
+        }
+    </script>
+</body>
+</html>

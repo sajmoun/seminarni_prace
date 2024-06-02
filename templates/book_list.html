@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Seznam knih</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Seznam knih</h1>
+        <form method="get" action="/books" class="form-inline">
+            <input type="text" name="author" placeholder="Zadejte autora" value="{{ filter_author if filter_author }}">
+            <button type="submit" class="btn btn-primary">Vyhledat</button>
+        </form>
+        <div class="book-list">
+            {% for book in books %}
+            <div class="book-item">
+                <h2><a href="/book/{{ book[0] }}">{{ book[1] }}</a></h2>
+                <form method="post" action="/delete_book/{{ book[0] }}">
+                    <button type="submit" class="red">Smazat</button>
+                </form>
+            </div>
+            {% endfor %}
+        </div>
+        <a href="/welcome" class="btn btn-secondary">Zpět</a>
+    </div>
+</body>
+</html>

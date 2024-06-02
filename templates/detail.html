@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', path='styles.css') }}">
+    <title>Detail knihy</title>
+</head>
+<body>
+<div class="container">
+    <h1>Detail knihy</h1>
+    <div class="book-details">
+        <h2>{{ book[2] }}</h2>
+        <p><strong>Autor:</strong> {{ book[3] }}</p>
+        <p><strong>Rok:</strong> {{ book[4] }}</p>
+        <p><strong>Žánr:</strong> {{ book[5] }}</p>
+        <p><strong>Obsah:</strong> {{ book[6] }}</p>
+        <p><strong>Poznámky:</strong> {{ book[7] }}</p>
+    </div>
+    <form method="post" action="/delete_book/{{ book[0] }}">
+        <button class="red" type="submit">Smazat knihu</button>
+    </form>
+    <a class="blue" href="/books">Zpět na seznam knih</a>
+</div>
+</body>
+</html>

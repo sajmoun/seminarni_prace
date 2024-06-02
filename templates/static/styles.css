@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+h1, h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    text-align: left;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    box-sizing: border-box;
+}
+
+form textarea {
+    width: 100%;
+    height: 20%;
+    margin-bottom: 10px;
+}
+
+button, .button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px 0;
+    width: 100%;
+}
+
+button.green, .button.green {
+    background-color: #28a745;
+    color: white;
+}
+
+button.blue, .button.blue {
+    background-color: #007bff;
+    color: white;
+}
+
+button.red, .button.red {
+    background-color: #dc3545;
+    color: white;
+}
+
+button.gray, .button.gray {
+    background-color: #6c757d;
+    color: white;
+}
+
+button .btn-seconary {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 600px;
+    }
+}
