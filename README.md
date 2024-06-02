@@ -25,8 +25,7 @@ Tato aplikace umožňuje:
 
 1. Klonujte tento repozitář do svého lokálního zařízení:
     ```bash
-    git clone https://github.com/vase-repozitar/knizni-databaze.git
-    cd knizni-databaze
+    git clone https://github.com/sajmoun/seminarni_prace/
     ```
 
 2. Vytvořte a aktivujte virtuální prostředí:
